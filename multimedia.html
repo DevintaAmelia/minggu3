@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Mengelola File Multimedia</h2>
+    <p>
+        <button onclick="durationvid()"type="button">Duration</button>
+        <button onclick="playvid()"type="button">Play Video</button>
+        <button onclick="pausevid()"type="button">Pause Video</button>
+        <button onclick="enableCon()"type="button">Enable Controls</button>
+        <button onclick="disableCon()"typr="button">Disable Controls</button>
+    </p>
+    <video id="myVideo"width="600"length="500">
+        <source src="rain.mp4"type="video/mp4">
+    </video>
+</body>
+<script>
+    var vid = document.getElementById("myVideo");
+
+    function durationvid() {
+        alert(vid.duration);
+    }
+    function playvid() {
+        vid.play();
+        vid.loop =true;
+    }
+    function pausevid() {
+        vid.pause();
+    }
+    function enableCon() {
+        vid.controls =true;
+        vid.load();
+    }
+    function disableCon() {
+        vid.controls =false;
+        vid.load();
+    }
+</script>
+</html>
